@@ -10,6 +10,7 @@ export class Juego2RemakeComponent implements OnInit {
   public powerUpnum: number=1;
   public costePowerUp: number=1;
   public dinero:    number=0;
+  public soltartecla:    string="defecto";
 
   public restart(){
     this.powerUpnum=1;
@@ -29,6 +30,16 @@ export class Juego2RemakeComponent implements OnInit {
 
   public clickear(){
     this.dinero=this.dinero+(1*this.powerUpnum);
+  }
+  public alertacopia(){
+    alert("Esta usted copiando.")
+  }
+  public alertacortar(){
+    alert("Esta usted cortando.")
+  }
+
+  public keyup1(n1:string):string{
+    return this.soltartecla=n1;
   }
 
   public powerUp1(){
