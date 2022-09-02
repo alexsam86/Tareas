@@ -5,12 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Componente1Component } from './componente1/componente1.component';
 import { MostrarImagenComponent } from './Componentes/mostrar-imagen/mostrar-imagen.component';
+import { AutosComponent } from './Componentes/autos/autos.component';
+import { ListarAutosComponent } from './Componentes/listar-autos/listar-autos.component';
+import { AgregarModificarComponent } from './Componentes/agregar-modificar/agregar-modificar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     Componente1Component,
-    MostrarImagenComponent
+    MostrarImagenComponent,
+    AutosComponent,
+    ListarAutosComponent,
+    AgregarModificarComponent
   ],
   imports: [
     BrowserModule,

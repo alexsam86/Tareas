@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-mostrar-imagen',
@@ -6,7 +6,8 @@ import { Component} from '@angular/core';
   styleUrls: ['./mostrar-imagen.component.scss']
 })
 export class MostrarImagenComponent {
-  public imagen:string="https://images6.alphacoders.com/503umb-1920-503717.jpg";
+  @Input()
+  public imagen:string="";
   public imagenalt:string="https://siempreauto.com/wp-content/uploads/sites/9/2021/05/anastase-maragos-Lrfuy93_hAc-unsplash.jpg?quality=60&strip=all&w=1200";
   public imagenerror():void{
     this.imagen=this.imagenalt;
