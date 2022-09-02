@@ -1,0 +1,27 @@
+.claramenteno{
+  animation:nel 0s linear 1;
+  opacity: 0;
+}
+@keyframes nel{
+  to{
+    opacity:0;
+  }
+  from{
+    opacity:1;
+  }
+
+}
+
+
+.claramentewn{
+  animation:admitido 1s linear 1000;
+  animation:admitido 1s reverse 1000;
+}
+@keyframes admitido{
+  from{
+    background-color: blue;
+  }
+  to{
+    background-color: red;
+  }
+}
