@@ -1,0 +1,26 @@
+<fieldset>
+  rut:
+  <input type="text" (input)="cambiarut($event)">
+  nombre:
+  <input type="text" (input)="cambianombre($event)">
+  apellido:
+  <input type="text" (input)="cambiaapellido($event)">
+  edad:
+  <input type="number" (input)="cambiaedad($event)">
+  <br>
+  seccion:
+  <select (change)="cambiaseccion($event)">
+    <option *ngFor="let objeto of secciones" [value]="objeto.nombre_seccion">{{objeto.nombre_seccion}}
+    </option>
+  </select>
+  <br>
+  <button (click)="confirmaralumno()">Registrar alumno</button>
+</fieldset>
+
+
+
+rut:string,
+nombre:string,
+apellido:string,
+edad:number,
+seccionorigen:Seccion,

@@ -1,0 +1,9 @@
+<fieldset>
+  alumno:
+  <section>
+    rut:{{ alumno.rut }}
+    nombre completo:{{ alumno.nombre | uppercase }} {{ alumno.apellido | lowercase}}
+    edad:{{ alumno.edad }}
+    seccion:{{ alumno.seccionorigen.nombre_seccion }}
+  </section>
+</fieldset>
