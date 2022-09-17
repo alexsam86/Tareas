@@ -1,0 +1,72 @@
+<section>
+  <fieldset>
+    <label for="">Ingrese Nùmero Pokedex</label>
+    <input
+      type="number"
+      name="numpd"
+      [value]="pokemon.numpd"
+      (input)="cambiarNumpd($event)"
+    >
+  </fieldset>
+  <fieldset>
+    <label for="">Ingrese el nombre</label>
+    <input
+      type="text"
+      name="nombre"
+      [value]="pokemon.nombre"
+      (input)="cambiarNombre($event)"
+    >
+  </fieldset>
+  <fieldset>
+    <label for="">Ingrese una URL de foto</label>
+    <input
+      type="url"
+      name="foto"
+      [value]="pokemon.foto"
+      (input)="cambiarFoto($event)"
+    >
+  </fieldset>
+  <fieldset>
+    <label for="">Ingrese una descripciòn</label>
+    <textarea
+      name="descripcion"
+      [value]="pokemon.descripcion"
+      (input)="cambiarDes($event)"
+    ></textarea>
+  </fieldset>
+  <fieldset>
+    <label for="">Seleccione el tipo de Pokemon</label>
+    <select
+      [value]="pokemon.tipo"
+      (change)="cambiarTipo($event)"
+    >
+      <option
+        *ngFor="let tipo of tipos"
+        [value]="tipo"
+
+      >
+        {{ tipo }}
+      </option>
+    </select>
+  </fieldset>
+  <fieldset>
+    <label for="">Seleccione la debilidad</label>
+    <select
+      [value]="pokemon.debilidades"
+      (change)="cambiarDebi($event)"
+    >
+      <option
+        *ngFor="let tipo of tipos"
+        [value]="tipo"
+      >
+        {{tipo}}
+      </option>
+    </select>
+  </fieldset>
+
+  <fieldset>
+    <button
+      (click)="guardar()"
+    >Guardar :D</button>
+  </fieldset>
+</section>
