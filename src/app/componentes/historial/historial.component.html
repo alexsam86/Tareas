@@ -1,1 +1,16 @@
-<p>historial works!</p>
+<fieldset>
+  alumno:
+  <br>
+  <fieldset>
+    <app-lista-alumnos [alumnos]="listarAlumnos"></app-lista-alumnos>
+    rut: {{historial.alumnoregistro.rut}}
+    nombre completo:: {{historial.alumnoregistro.nombre | uppercase }} {{historial.alumnoregistro.apellido| lowercase}}
+    Edad:{{historial.alumnoregistro.edad}}
+    Seccion: {{historial.alumnoregistro.seccionorigen.nombre_seccion}}
+  </fieldset>
+  <fieldset>
+    Fecha: {{ historial.fecha | date:' h:mm a,M/d/yy' }}
+  </fieldset>
+</fieldset>
+
+

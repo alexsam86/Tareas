@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Seccion } from './Modelos/seccion';
 import { Historial } from './Modelos/historial';
 import { Alumno } from './Modelos/alumno';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -27,14 +26,19 @@ export class AppComponent {
   ]
   public arrayhistorial:[Historial]=[
     {
-      alumnoregistro:{ rut:'',apellido:'',edad:0,nombre:'',seccionorigen:{id:0,nombre_seccion:''} },
-      fecha:'',
+      alumnoregistro:{ rut:'21729588-2',apellido:'alayoubi hernandez',edad:20,nombre:'sammy',seccionorigen:{id:1,nombre_seccion:'007D'} },
+      fecha:new Date() ,
     },
   ]
   public escucharseccion(evento:Seccion):void{
     this.arrayseccion.push(evento);
   }
   public escucharalumno(evento:Alumno):void{
+    const historialmomento:Historial={
+      alumnoregistro:evento,
+      fecha:new Date(),
+    }
     this.arrayalumno.push(evento);
+    this.arrayhistorial.push(historialmomento);
   }
 }

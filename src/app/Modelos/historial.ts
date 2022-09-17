@@ -1,6 +1,6 @@
 import { Alumno } from "./alumno";
 
 export interface Historial {
-  fecha:string,
+  fecha:Date,
   alumnoregistro:Alumno,
  }

@@ -1,6 +1,12 @@
 {{ title }}
+<h1>Formulario seccion</h1>
 <app-formulario-seccion (enviarseccion)="escucharseccion($event)" ></app-formulario-seccion>
-<app-formulario-alumno (enviaralumno)="escucharalumno($event)" [secciones]="arrayseccion">
+<br>
+<h1>Formulario alumno</h1>
+<app-formulario-alumno (enviaralumno)="escucharalumno($event)"
+ [secciones]="arrayseccion">
 </app-formulario-alumno>
+<h1>lista de alumnos</h1>
 <app-lista-alumnos [alumnos]="arrayalumno"></app-lista-alumnos>
-
+<h1>historial de alumnos</h1>
+<app-lista-historial [historialarray]="arrayhistorial" ></app-lista-historial>

@@ -1,6 +1,5 @@
 import { Seccion } from 'src/app/Modelos/seccion';
 import { Component,Output,EventEmitter} from '@angular/core';
-
 @Component({
   selector: 'app-formulario-seccion',
   templateUrl: './formulario-seccion.component.html',
